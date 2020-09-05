@@ -9,7 +9,7 @@ void setOkToTrue(){
     __ok = !__ok;
 }
 
-void dropBox(int ipos, int jpos, int isize, std::vector<wchar_t*>& wlist, wchar_t* output)
+void dropBox(int ipos, int jpos, int isize, std::vector<const wchar_t*>& wlist, wchar_t* output)
 {
     widgets_updated = true;//prevents multiple drop boxes to be activated in the same frame
     COORD c = {(short)jpos, (short)ipos};//used for display

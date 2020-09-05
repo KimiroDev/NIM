@@ -24,11 +24,11 @@ void work()
         buffer[i] = L' ';
 
     wchar_t temp[10] = L"Jonathan";
-    names.push_back(temp);
+    names.push_back(L"Jonathan");
     wchar_t temp2[10] = L"Alice";
-    names.push_back(temp2);
+    names.push_back(L"Alice");
     wchar_t temp3[10] = L"Bob";
-    names.push_back(temp3);
+    names.push_back(L"Bob");
 
     difficulties.push_back(L"easy");
     difficulties.push_back(L"medium");

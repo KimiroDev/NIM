@@ -58,7 +58,7 @@ bool game_mode = true;//false = 1 player, true = 2 players
 
 wchar_t *screen = new wchar_t[screen_width*screen_height];//console graphic buffer
 
-std::vector<wchar_t*> names;
+std::vector<const wchar_t*> names;
 
 void resetScore()
 { score1 = score2 = 0; }

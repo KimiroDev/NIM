@@ -8,7 +8,7 @@ class Button
 {
 public:
     //        position  /        size        / displayed text / function called when pressed
-    Button(int i, int j, int isize, int jsize, wchar_t name[], void (*foo)())
+    Button(int i, int j, int isize, int jsize, const wchar_t name[], void (*foo)())
     {
         textsize = 0;
         while(name[textsize])
