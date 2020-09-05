@@ -121,9 +121,26 @@ void players_2()
 {
 	game_mode = true;
 	restart_game = true;
-    if (default_turn == 1)
-        wstrcpy(player1, names[1]);
-    else wstrcpy(player2, names[1]);
+    if (turn == 1)
+    {
+        if (names[0][0] != player1[0])
+        {
+            wstrcpy(player1, names[1]);
+        }
+        else
+            wstrcpy(player1, names[0]);
+    }
+    else
+    {
+        if (names[0][0] != player2[0])
+        {
+            wstrcpy(player2, names[1]);
+        }
+        else
+            wstrcpy(player2, names[0]);
+    }
+
+    turn = 0;
 }
 
 #endif // VARIABLES_H_INCLUDED

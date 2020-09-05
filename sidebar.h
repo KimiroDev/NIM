@@ -109,6 +109,10 @@ void sideBar()
         print("Developmen", 0, 11);
         print("t!", 0, 12);
     }
+    if (scene == 1)
+    {
+        print(nrCoins + 1, 5, 0, 10);
+    }
 
     //sidebar line
     for(int i=0; i<screen_height; i++)
