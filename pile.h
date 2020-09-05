@@ -74,6 +74,12 @@ public:
 
         for(int ii = 1; ii <= nrcoins; ii++)
             coins.push_back(Coin(screen_height-(ii*5), i, 5, 10));
+
+        srand(time(0));
+        for (size_t i = 0; i < 5; i++)
+        {
+            nrCoins[i] = rand() % 6;
+        }
     }
 
     int update(int mi, int mj)

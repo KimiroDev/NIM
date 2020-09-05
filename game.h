@@ -10,7 +10,8 @@
 //when start_game is true the piles are filled up again
 void setrestart_gametotrue()
 {
-    if(scene==1)restart_game=true;
+    if (scene == 1)
+        restart_game = true;
 }
 
 void changeDefaultTurn()
@@ -52,6 +53,21 @@ void game()
 
     pile_updated = false;
 
+    if (restart_game)
+    {
+        for (size_t i = 0; i < 5; i++)
+        {
+            piles[i].reset(14 * (i + 1), unsigned short(rand() % 5 + 1));
+        }
+
+        turn = default_turn;
+        restart_game = false;
+        score_updated = false;
+        game_begin = true;
+
+        coin_selected = 1;
+        pile_selected = 6;
+    }
 
     if (!game_end)// game still running
     {
@@ -167,7 +183,7 @@ void game()
                 else
                     { wstrcpy(winner, player1); ++score1; }
             }
-
+   
         }
 
         /* display winner */
@@ -195,23 +211,6 @@ void game()
     {
         turn = 1 - turn;//next player's turn
         updated = false;
-    }
-
-    if(restart_game)
-    {
-		for (size_t i = 0; i < 5; i++)
-		{
-			piles[i].reset(14 * (i + 1), unsigned short (rand() % 5 + 1));
-		}
-        nrCoins[2] = 2;//necessary... for some reason
-
-        turn = default_turn;
-        restart_game = false;
-        score_updated = false;
-        game_begin = true;
-
-        coin_selected = 1;
-        pile_selected = 1;
     }
 
 }

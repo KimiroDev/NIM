@@ -112,9 +112,12 @@ void players_1()
 {
 	game_mode = false;
 	restart_game = true;
+
     if (default_turn == 1)
         wstrcpy(player1, "Computer");
     else wstrcpy(player2, "Computer");
+
+    default_turn = turn = 0;
 }
 
 void players_2()
@@ -140,7 +143,7 @@ void players_2()
             wstrcpy(player2, names[0]);
     }
 
-    turn = 0;
+    default_turn = turn = 0;
 }
 
 #endif // VARIABLES_H_INCLUDED
